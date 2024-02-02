@@ -12,7 +12,7 @@ body{
     height: 10%;
 }
 .main{
-    background-color: rgb(214, 193, 74);
+   background-color: rgb(214, 193, 74); 
     height: 892px;
 }
 .day{
@@ -50,4 +50,8 @@ button{
 }
 p{
     display: none;
+}
+h2:hover {
+  /*  background-image: url("the-rock-sus.gif"); */
+    background-size: contain;
 }
