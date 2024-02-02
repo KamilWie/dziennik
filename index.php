@@ -11,24 +11,35 @@
 <?php
 $conn = new mysqli("localhost","root","","baza_dziennik");
 $kw1 = "SELECT Nazwa FROM zadania WHERE dzien_tygodnia = 1";
-$use = mysqli_query($conn, $kw1);
-$row = mysqli_fetch_array($use);
+$use1 = mysqli_query($conn, $kw1);
+$kw2 = "SELECT Nazwa FROM zadania WHERE dzien_tygodnia = 2";
+$use2 = mysqli_query($conn, $kw2);
+$kw3 = "SELECT Nazwa FROM zadania WHERE dzien_tygodnia = 3";
+$use3 = mysqli_query($conn, $kw3);
+$kw4 = "SELECT Nazwa FROM zadania WHERE dzien_tygodnia = 4";
+$use4 = mysqli_query($conn, $kw4);
+$kw5 = "SELECT Nazwa FROM zadania WHERE dzien_tygodnia = 5";
+$use5 = mysqli_query($conn, $kw5);
 
+echo "<div class='glowny'>
+<div id='poniedzialek' class='dzien'><h2>Poniedziałek</h2><ul><li>";
+while($tab=mysqli_fetch_row($use1)){echo "$tab[0]";}
+echo"</li></ul></div>
+<div id='wtorek' class='dzien'><h2>Wtorek</h2><ul><li>";
+while($tab=mysqli_fetch_row($use2)){echo "$tab[0]";}
+echo "</li></ul></div>
+<div id='sroda' class='dzien'><h2>Środa</h2><ul><li>";
+while($tab=mysqli_fetch_row($use3)){echo "$tab[0]";}
+echo "</li></ul></div>
+<div id='czwartek' class='dzien'><h2>Czwartek</h2><ul><li>";
+while($tab=mysqli_fetch_row($use4)){echo "$tab[0]";}
+echo "</li></ul></div>
+<div id='piatek' class='dzien'><h2>Piątek</h2><ul><li>";
+while($tab=mysqli_fetch_row($use5)){echo "$tab[0]";}
+echo "</li></ul></div>
+</div>";
+?>
 
-?>
-<div class='glowny'>
-<div id='poniedzialek' class='dzien'><h2>Poniedziałek</h2><ul><li>
-<?php
-while ($row = mysqli_fetch_row($use)) {
-    echo $row['Nazwa'];
-}
-?>
-</li></ul></div>
-<div id='wtorek' class='dzien'><h2>Wtorek</h2><ul><li></li></ul></div>
-<div id='sroda' class='dzien'><h2>Środa</h2><ul><li></li></ul></div>
-<div id='czwartek' class='dzien'><h2>Czwartek</h2><ul><li></li></ul></div>
-<div id='piatek' class='dzien'><h2>Piątek</h2><ul><li></li></ul></div>
-</div>
 
 
 
