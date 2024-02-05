@@ -24,19 +24,19 @@ $use5 = mysqli_query($conn, $kw5);
 echo "<div class='main'>
 <div id='poniedzialek' class='day'><h2>Poniedziałek</h2><ul><li>";
 while($tab=mysqli_fetch_row($use1)){echo "$tab[0]";}
-echo"</li></ul><button class='show' onclick='fshow1()''>Show</button><p id='pon'>If there is no element with the given id, this function returns null. Note that the id parameter is</p></div>
+echo"</li></ul><button class='show' onclick='fshow1()''>Rozwiń</button><p id='pon'>Zapoznanie z harmonogramem pracy, oprowadzenie o firmie, sprawy organizacyjne</p></div>
 <div id='wtorek' class='day'><h2>Wtorek</h2><ul><li>";
 while($tab=mysqli_fetch_row($use2)){echo "$tab[0]";}
-echo "</li></ul><button class='show' onclick='fshow2()''>Show</button><p id='wt'>If there is no element with the given id, this function returns null. Note that the id parameter is</p></div>
+echo "</li></ul><button class='show' onclick='fshow2()''>Rozwiń</button><p id='wt'>Aktualizacja bazy danych pozajdy, dodanie magistral CAN do bazy danych</p></div>
 <div id='sroda' class='day'><h2>Środa</h2><ul><li>";
 while($tab=mysqli_fetch_row($use3)){echo "$tab[0]";}
-echo "</li></ul><button class='show' onclick='fshow3()''>Show</button><p id='sr'>If there is no element with the given id, this function returns null. Note that the id parameter is</p></div>
+echo "</li></ul><button class='show' onclick='fshow3()''>Rozwiń</button><p id='sr'>Końcowe zmiany w bazie danych, zapozanie podstaw Gita</p></div>
 <div id='czwartek' class='day'><h2>Czwartek</h2><ul><li>";
 while($tab=mysqli_fetch_row($use4)){echo "$tab[0]";}
-echo "</li></ul><button class='show' onclick='fshow4()''>Show</button><p id='czw'>If there is no element with the given id, this function returns null. Note that the id parameter is</p></div>
+echo "</li></ul><button class='show' onclick='fshow4()''>Rozwiń</button><p id='czw'>poszerzenie znajomości Gita, Gitflow, Github. Rozpoczęcie projektu strony Tygodniowy Harmonogram Pracy z wykorzystaniem html,css,php,sql,js</p></div>
 <div id='piatek' class='day'><h2>Piątek</h2><ul><li>";
 while($tab=mysqli_fetch_row($use5)){echo "$tab[0]";}
-echo "</li></ul><button class='show' onclick='fshow5()''>Show</button><p id='pt'>If there is no element with the given id, this function returns null. Note that the id parameter is</p></div>
+echo "</li></ul><button class='show' onclick='fshow5()''>Rozwiń</button><p id='pt'>Kontynuacja projektu Tygodniowy Harmonogram Pracy</p></div>
 </div>";
 ?>
 
